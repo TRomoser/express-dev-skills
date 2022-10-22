@@ -5,15 +5,15 @@
 <ul>
   <% skills.forEach(function(s) { %>
     <li>
-      <!-- <form
+      <form
         action="/skills/<%= s.id %>?_method=DELETE"
         method="POST"
         class="delete-form"
       >
-        <button type="submit">X</button> -->
+        <button id="x" type="submit">X</button>
       </form>
       <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-      - 
+      -
       <%= s.active ? 'learned' : 'not yet learned' %>
     </li>
   <% }); %>
@@ -21,4 +21,3 @@
 <a href="/skills/new">Add Skill</a>
 
 <%- include('../partials/footer') %>
-g
